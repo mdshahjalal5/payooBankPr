@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bank Account</title>
-    <link rel="stylesheet" href="" />
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="" /> -->
 
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
@@ -37,8 +37,11 @@
                 <span class="label-text">Account Number</span>
               </label>
               <input
+                id="account-number"
+                value="01989763775"
                 type="number"
                 placeholder="Account Number"
+                maxlength="11"
                 class="input input-bordered"
                 required
               />
@@ -48,6 +51,8 @@
                 <span class="label-text">Pin</span>
               </label>
               <input
+                id="pin"
+                value="1234"
                 type="password"
                 placeholder="Pin"
                 class="input input-bordered"
@@ -60,7 +65,7 @@
               </label>
             </div>
             <div class="form-control mt-6">
-              <button class="btn btn-primary">Login</button>
+              <button id="login-btn" class="btn btn-primary">Login</button>
             </div>
           </form>
         </div>

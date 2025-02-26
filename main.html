@@ -3,10 +3,242 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="stylesheet" href="" />
+    <title>Transaction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    main page
+  <body class="bg-slate-800">
+    <section class="bg-gray-200 min-h-screen max-w-md mx-auto">
+      <header class="">
+        <nav class="flex justify-around items-center pt-5">
+          <img src="assets/Group.png" alt="" />
+          <div class="space-y-2">
+            <h2 id="current-balance" class="text-3xl text-center font-bold">
+              $ 00
+            </h2>
+            <button class="border p-2 rounded border-sky-500">
+              Current Balance
+            </button>
+          </div>
+          <button id="logout" class="btn btn-outline btn-primary">
+            Logout
+          </button>
+        </nav>
+      </header>
+      <div class="p-4 pt-7">
+        <h2 class="text-2xl font-bold w-4/6 mx-auto text-center text-sky-300">
+          Welcome to Balance Transaction Hub
+        </h2>
+        <p class="text-center text-gray-700">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+      <!-- services section -->
+      <section class="grid grid-cols-3 gap-2 mt-10 px-3">
+        <div
+          id="add-money"
+          class="border border-purple-400 rounded-md p-3 text-center cursor-pointer hover:border-2"
+        >
+          <div class="flex justify-center">
+            <img src="assets/wallet1.png " alt="" class="w-8" />
+          </div>
+          <h2 class="text-xl font-medium">Add Money</h2>
+        </div>
+        <div
+          class="border border-purple-400 rounded-md p-3 text-center cursor-pointer hover:border-2"
+          id="cash-out"
+        >
+          <div class="flex justify-center">
+            <img src="assets/money1.png " alt="" class="w-8" />
+          </div>
+          <h2 class="text-xl font-medium">Cash Out</h2>
+        </div>
+        <div
+          class="border border-purple-400 rounded-md p-3 text-center cursor-pointer hover:border-2"
+        >
+          <div class="flex justify-center">
+            <img src="assets/wallet1.png " alt="" class="w-8" />
+          </div>
+          <h2 class="text-xl font-medium">Add Money</h2>
+        </div>
+        <div
+          class="border border-purple-400 rounded-md p-3 text-center cursor-pointer hover:border-2"
+        >
+          <div class="flex justify-center">
+            <img src="assets/wallet1.png " alt="" class="w-8" />
+          </div>
+          <h2 class="text-xl font-medium">Add Money</h2>
+        </div>
+        <div
+          class="border border-purple-400 rounded-md p-3 text-center cursor-pointer hover:border-2"
+        >
+          <div class="flex justify-center">
+            <img src="assets/wallet1.png " alt="" class="w-8" />
+          </div>
+          <h2 class="text-xl font-medium">Add Money</h2>
+        </div>
+        <div
+          class="border border-purple-400 rounded-md p-3 text-center cursor-pointer hover:border-2"
+        >
+          <div class="flex justify-center">
+            <img src="assets/wallet1.png " alt="" class="w-8" />
+          </div>
+          <h2 class="text-xl font-medium">Add Money</h2>
+        </div>
+      </section>
+      <section class="mt-7" id="add-money-sec">
+        <h2 class="text-3xl text-center">Add Money</h2>
+        <div
+          class="card bg-base-400 w-full mx-auto max-w-sm shrink-0 rounded-md mt-3 shadow-md"
+        >
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Select Method</span>
+              </label>
+              <select class="select select-accent w-full max-w-xs">
+                <option disabled selected>Select Method</option>
+                <option>Bkash</option>
+                <option>Nagad</option>
+                <option>Rocket</option>
+                <option>M Cash</option>
+                <option>Upay</option>
+                <option>Paypal</option>
+              </select>
+            </div>
+            <div>
+              <label class="label">
+                <span class="label-text">Account Number</span>
+              </label>
+              <input
+                id="account-number"
+                value="01989763775"
+                type="number"
+                placeholder="Account Number"
+                maxlength="11"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div>
+              <label class="label">
+                <span class="label-text">Amount</span>
+              </label>
+              <input
+                id="amount"
+                type="number"
+                placeholder="Amount"
+                maxlength="11"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pin</span>
+              </label>
+              <input
+                id="pin"
+                value="1234"
+                type="password"
+                placeholder="Pin"
+                class="input input-bordered"
+                required
+              />
+              <label class="label">
+                <a href="#" class="label-text-alt link link-hover"
+                  >Forgot Pin?</a
+                >
+              </label>
+            </div>
+            <div class="form-control">
+              <button id="login-btn" class="btn btn-primary w-full">
+                Add Money
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="mt-7" id="cash-out-sec">
+        <h2 class="text-3xl text-center">Cash Out</h2>
+        <div
+          class="card bg-base-400 w-full mx-auto max-w-sm shrink-0 rounded-md mt-3 shadow-md"
+        >
+          <form class="card-body">
+            <!-- <div class="form-control">
+              <label class="label">
+                <span class="label-text">Select Method</span>
+              </label>
+              <select class="select select-accent w-full max-w-xs">
+                <option disabled selected>Select Method</option>
+                <option>Bkash</option>
+                <option>Nagad</option>
+                <option>Rocket</option>
+                <option>M Cash</option>
+                <option>Upay</option>
+                <option>Paypal</option>
+              </select>
+            </div> -->
+            <div>
+              <label class="label">
+                <span class="label-text">Destination Number</span>
+              </label>
+              <input
+                id="account-number"
+                value="01989763775"
+                type="number"
+                placeholder="Account Number"
+                maxlength="11"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div>
+              <label class="label">
+                <span class="label-text">Amount</span>
+              </label>
+              <input
+                id="amount"
+                type="number"
+                placeholder="Amount"
+                maxlength="11"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pin</span>
+              </label>
+              <input
+                id="pin"
+                value="1234"
+                type="password"
+                placeholder="Pin"
+                class="input input-bordered"
+                required
+              />
+              <label class="label">
+                <a href="#" class="label-text-alt link link-hover"
+                  >Forgot Pin?</a
+                >
+              </label>
+            </div>
+            <div class="form-control">
+              <button id="login-btn" class="btn btn-primary w-full">
+                Cash Out
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+    <script src="JS/toggle.js"></script>
+    <script src="JS/logout.js"></script>
   </body>
 </html>
