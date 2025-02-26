@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Bank Account</title>
     <link rel="stylesheet" href="" />
 
     <link
@@ -26,7 +26,46 @@
             />
           </div>
         </nav>
+
+        <!--w: login section -->
+        <div
+          class="card bg-base-100 w-full mx-auto max-w-sm shrink-0 rounded-md mt-16"
+        >
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Account Number</span>
+              </label>
+              <input
+                type="number"
+                placeholder="Account Number"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pin</span>
+              </label>
+              <input
+                type="password"
+                placeholder="Pin"
+                class="input input-bordered"
+                required
+              />
+              <label class="label">
+                <a href="#" class="label-text-alt link link-hover"
+                  >Forgot Pin?</a
+                >
+              </label>
+            </div>
+            <div class="form-control mt-6">
+              <button class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
       </header>
     </section>
+    <script src="JS/login.js"></script>
   </body>
 </html>
